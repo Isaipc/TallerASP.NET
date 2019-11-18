@@ -13,5 +13,21 @@ namespace TallerASP.NET
         {
 
         }
+
+        protected void iniciarButton_Click(object sender, EventArgs e)
+        {
+            string usuario = "isai@gmail.com";
+            string password = "1234";
+
+            if(userBox.Text == usuario && passwordBox.Text == password)
+            {
+                Response.Redirect("Contacto.aspx");
+            }
+        }
+
+        protected void registrarButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

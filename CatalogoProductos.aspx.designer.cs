@@ -11,7 +11,7 @@ namespace TallerASP.NET
 {
 
 
-    public partial class Login
+    public partial class CatalogoProductos
     {
 
         /// <summary>
@@ -24,39 +24,66 @@ namespace TallerASP.NET
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control userBox.
+        /// Control IdProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userBox;
+        protected global::System.Web.UI.WebControls.HiddenField IdProducto;
 
         /// <summary>
-        /// Control passwordBox.
+        /// Control NombreBox.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passwordBox;
+        protected global::System.Web.UI.WebControls.TextBox NombreBox;
 
         /// <summary>
-        /// Control iniciarButton.
+        /// Control PrecioBox.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button iniciarButton;
+        protected global::System.Web.UI.WebControls.TextBox PrecioBox;
 
         /// <summary>
-        /// Control registrarButton.
+        /// Control StockBox.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registrarButton;
+        protected global::System.Web.UI.WebControls.TextBox StockBox;
+
+        /// <summary>
+        /// Control GuardarButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button GuardarButton;
+
+        /// <summary>
+        /// Control LimpiarButton.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LimpiarButton;
+
+        /// <summary>
+        /// Control ProductosGrid.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView ProductosGrid;
     }
 }

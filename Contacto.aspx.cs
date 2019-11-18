@@ -21,16 +21,16 @@ namespace TallerASP.NET
         {
             MailMessage correo = new MailMessage();
             SmtpClient client = new SmtpClient();
-            string direccion = "isai.polito6052@gmail.com";
+            string direccion = "isaipolito6052@gmail.com";
 
             string cuerpo = File.ReadAllText(MapPath("/Email.html"));
             cuerpo = cuerpo.Replace("[nombre]", nombreBox.Text);
             cuerpo = cuerpo.Replace("[comentario]", comentarioBox.Text);
 
             //configuracion correo
-            correo.From = new MailAddress(direccion, "Isai Polito");
+            correo.From = new MailAddress(direccion, "Isai Polito Cansino");
             correo.Subject = "Taller ASP.NET";
-            correo.Body = cuerpo; 
+            correo.Body = cuerpo;
             correo.IsBodyHtml = true;
             correo.To.Add(correoBox.Text.Trim());
 
@@ -38,19 +38,14 @@ namespace TallerASP.NET
             client.EnableSsl = true;
             client.Host = "smtp.gmail.com";
             client.Port = 587;
+            client.UseDefaultCredentials = false;
 
-            client.Credentials = new NetworkCredential(direccion, "alvfierropariente");
+            //client.Credentials = new NetworkCredential(direccion, "TuContraseña");
+            #region Contraseña
+            client.Credentials = new NetworkCredential(direccion, "ExoHaNd9428565");
+
+            #endregion
             client.Send(correo);
-            resetForm();
-
-
-        }
-
-        protected void resetForm()
-        {
-            nombreBox.Text = "";
-            comentarioBox.Text = "";
-            correoBox.Text = "";
         }
     }
 }

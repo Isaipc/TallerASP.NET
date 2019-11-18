@@ -6,8 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="Content/css/bootstrap.min.css" rel="stylesheet" />
-    <%--<link href="Content/css/adminlte.min.css" rel="stylesheet" />--%>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+
 </head>
 <body class="bg-dark">
 
@@ -20,18 +22,18 @@
                 </div>
                 <div class="body ">
                     <div class="form-group">
-                        <span>Usuario:</span>
-                        <asp:TextBox ID="userBox" runat="server" CssClass="form-control" placeholder="usuario"/>
+                        <span>Email:</span>
+                        <asp:TextBox ID="userBox" runat="server" TextMode="Email" CssClass="form-control" placeholder="email" required/>
                     </div>
                     <div class="form-group">   
                         <span>Pass:</span>
-                        <asp:TextBox ID="passwordBox" runat="server" CssClass="form-control" placeholder="password"/>
+                        <asp:TextBox ID="passwordBox" TextMode="Password" runat="server" CssClass="form-control" placeholder="password" required/>
                     </div>
                 </div>
                 <div class="footer">
                     <div class="form-group">
-                        <asp:Button Text="Iniciar sesión" runat="server" CssClass="btn btn-primary btn-block"/>
-                        <asp:Button Text="Registrarse" runat="server" CssClass="btn btn-outline-dark btn-block"/>
+                        <asp:Button ID="iniciarButton" Text="Iniciar sesión" runat="server" CssClass="btn btn-primary btn-block" OnClick="iniciarButton_Click"/>
+                        <asp:Button ID="registrarButton" Text="Registrarse" runat="server" CssClass="btn btn-outline-dark btn-block" OnClick="registrarButton_Click"/>
                     </div>
                 </div>
         </form>
